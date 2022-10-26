@@ -18,8 +18,8 @@ public class Publicacion extends Persistente {
     @JoinColumn(name = "producto_final_id", referencedColumnName = "id")
     private ProductoFinal productoFinal;
 
-    @Column(name = "fecha", columnDefinition = "VARCHAR(50)")
-    private String fecha;
+    @Column(name = "fecha", columnDefinition = "DATE")
+    private LocalDate fecha;
 
     @Column(name = "estado", columnDefinition = "VARCHAR(50)")
     private String estado;

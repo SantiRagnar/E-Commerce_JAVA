@@ -23,8 +23,8 @@ public class Pedido extends Persistente {
     @Column(name = "forma_de_pago")
     private String formaDePago;
 
-    @Column(name = "fecha_hora", columnDefinition = "VARCHAR(50)")
-    private String fecha_hora;
+    @Column(name = "fecha_hora", columnDefinition = "DATE")
+    private LocalDate fecha_hora;
 
     @Column(name = "estado", columnDefinition = "VARCHAR(50)")
     private String estado;
