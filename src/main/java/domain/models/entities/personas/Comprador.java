@@ -18,10 +18,10 @@ public class Comprador extends Persona{
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "carrito_de_compra_id", referencedColumnName = "id")
     private CarritoDeCompra carritoDeCompra;
-    @OneToMany(mappedBy = "comprador")
-    private List<Pedido> listaDePedidos;
+
+    @OneToOne(mappedBy = "comprador")
+    private Pedido pedido;
 
     public Comprador() {
-        this.listaDePedidos = new ArrayList<>();
     }
 }

@@ -29,5 +29,4 @@ public class Gestor extends Persona{
         this.listaDeVendedores = new ArrayList<>();
     }
 
-
 }

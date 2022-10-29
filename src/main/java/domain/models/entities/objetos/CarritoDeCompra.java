@@ -19,9 +19,9 @@ public class CarritoDeCompra extends Persistente {
     @JoinColumn(name = "comprador_id", referencedColumnName = "id")
     private Comprador comprador;
 
-    @OneToOne
+   /* @OneToOne
     @JoinColumn(name = "tienda_id", referencedColumnName = "id")
-    private Tienda tienda;
+    private Tienda tienda;*/
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "carrito_de_compra_id", nullable = false)

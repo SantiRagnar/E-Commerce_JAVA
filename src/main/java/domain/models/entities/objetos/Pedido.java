@@ -13,12 +13,13 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class Pedido extends Persistente {
-    @ManyToOne
+    @OneToOne
+    @JoinColumn(name = "comprador_id", referencedColumnName = "id")
     private Comprador comprador;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    /*@OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vendedor_id", referencedColumnName = "id")
-    private CarritoDeCompra carritoDeCompra;
+    private CarritoDeCompra carritoDeCompra;*/
 
     @Column(name = "forma_de_pago")
     private String formaDePago;
